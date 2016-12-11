@@ -1,0 +1,17 @@
+{
+  "extDescription": {
+    "message": "タブの中にストップウォッチを表示する拡張機能です。"
+  },
+  "actionContinue": {
+    "message": "再開"
+  },
+  "actionReset": {
+    "message": "リセット"
+  },
+  "alertStart": {
+    "message": "開始"
+  },
+  "alertStop": {
+    "message": "停止"
+  }
+}

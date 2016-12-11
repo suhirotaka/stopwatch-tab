@@ -1,0 +1,25 @@
+{
+  "name": "Stopwatch Tab",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "version": "1.0.4",
+
+  "browser_action": {
+    "default_title": "Stopwatch Tab",
+    "default_icon": "icon_32.png",
+    "popup": "popup.html"
+  },
+  "background_page": "background.html",
+  "icons": {
+  },
+  "icons": {
+    "128": "icon_128.png",
+    "72": "icon_72.png",
+    "48": "icon_48.png",
+    "32": "icon_32.png"
+  },
+
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ]
+}

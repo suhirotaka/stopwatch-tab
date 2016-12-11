@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="popup.js"></script>
+<style>
+body {
+  width: 110px;
+  font-family:arial,sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <div id="alert-start" style="display:none;"><script>document.write(chrome.i18n.getMessage('alertStart'));</script></div>
+  <div id="alert-stop" style="display:none;"><script>document.write(chrome.i18n.getMessage('alertStop'));</script></div>
+  <div id="action-wrapper" style="display:none;">
+    <a id="action-continue" href="#"><script>document.write(chrome.i18n.getMessage('actionContinue'));</script></a> | <a id="action-reset" href="#"><script>document.write(chrome.i18n.getMessage('actionReset'));</script></a>
+  </div>
+</body>
+</html>

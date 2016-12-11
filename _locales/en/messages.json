@@ -1,0 +1,17 @@
+{
+  "extDescription": {
+    "message": "Display stopwatches on tabs."
+  },
+  "actionContinue": {
+    "message": "Continue"
+  },
+  "actionReset": {
+    "message": "Reset"
+  },
+  "alertStart": {
+    "message": "Started."
+  },
+  "alertStop": {
+    "message": "Stopped."
+  }
+}
