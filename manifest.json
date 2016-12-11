@@ -1,17 +1,10 @@
 {
+  "manifest_version": 2,
   "name": "Stopwatch Tab",
-  "description": "__MSG_extDescription__",
-  "default_locale": "en",
-  "version": "1.0.4",
+  "version": "1.0.5",
 
-  "browser_action": {
-    "default_title": "Stopwatch Tab",
-    "default_icon": "icon_32.png",
-    "popup": "popup.html"
-  },
-  "background_page": "background.html",
-  "icons": {
-  },
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
   "icons": {
     "128": "icon_128.png",
     "72": "icon_72.png",
@@ -19,6 +12,12 @@
     "32": "icon_32.png"
   },
 
+  "browser_action": {
+    "default_title": "Stopwatch Tab",
+    "default_icon": "icon_32.png",
+    "popup": "popup.html"
+  },
+  "background_page": "background.html",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ]
