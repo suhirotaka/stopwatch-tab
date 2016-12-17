@@ -14,6 +14,7 @@ window.onload = function() {
     timerManager = new bg.TimerManager(tab);
     if (timerManager.hasStarted()) {
       alertStop = document.getElementById('alert-stop');
+      alertStop.innerHTML = chrome.i18n.getMessage('alertStop');
       alertStop.style.display = '';
       timerManager.stop();
       setTimeout(function() {
@@ -21,6 +22,7 @@ window.onload = function() {
       }, 1500);
     }else if (timerManager.isInitialState()) {
       alertStart = document.getElementById('alert-start');
+      alertStart.innerHTML = chrome.i18n.getMessage('alertStart');
       alertStart.style.display = '';
       timerManager.start();
       setTimeout(function() {
@@ -30,6 +32,8 @@ window.onload = function() {
       actCont = document.getElementById('action-continue');
       actReset = document.getElementById('action-reset');
       actWrapper = document.getElementById('action-wrapper');
+      actCont.innerHTML = chrome.i18n.getMessage('actionContinue');
+      actReset.innerHTML = chrome.i18n.getMessage('actionReset');
       actWrapper.style.display = '';
       actCont.addEventListener('click', function() {
         timerManager.start();
