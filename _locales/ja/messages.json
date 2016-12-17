@@ -9,9 +9,9 @@
     "message": "リセット"
   },
   "alertStart": {
-    "message": "開始"
+    "message": "開始しました。"
   },
   "alertStop": {
-    "message": "停止"
+    "message": "停止しました。"
   }
 }
