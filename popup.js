@@ -7,7 +7,7 @@ window.onload = function() {
       alertStop,
       timerManager;
   chrome.tabs.getSelected(null, function(tab) {
-    if (!tab.url.match(/^https?:\/\//)) {
+    if (!tab.url.match(/^https?:\/\//) || tab.url.match(/^https?:\/\/chrome\.google\.com/)) {
       alertInvalid = document.getElementById('alert-invalid');
       alertInvalid.innerHTML = chrome.i18n.getMessage('alertInvalid');
       alertInvalid.style.display = '';
