@@ -8,7 +8,12 @@ window.onload = function() {
       timerManager;
   chrome.tabs.getSelected(null, function(tab) {
     if (!tab.url.match(/^https?:\/\//)) {
-      window.close();
+      alertInvalid = document.getElementById('alert-invalid');
+      alertInvalid.innerHTML = chrome.i18n.getMessage('alertInvalid');
+      alertInvalid.style.display = '';
+      setTimeout(function() {
+        window.close();
+      }, 1500);
       return false;
     }
     timerManager = new bg.TimerManager(tab);

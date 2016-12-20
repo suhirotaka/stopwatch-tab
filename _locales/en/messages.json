@@ -14,6 +14,9 @@
   "alertStop": {
     "message": "Stopped."
   },
+  "alertInvalid": {
+    "message": "Stopwatch Tab doesn't work in this page."
+  },
   "showHours": {
     "message": "Display hours"
   }
