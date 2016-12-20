@@ -13,5 +13,8 @@
   },
   "alertStop": {
     "message": "停止しました。"
+  },
+  "showHours": {
+    "message": "「時」を表示する"
   }
 }

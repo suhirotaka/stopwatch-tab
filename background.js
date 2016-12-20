@@ -7,24 +7,31 @@ var TabTimer = function(tab) {
   this.hasStarted = false;
   this.isInitialState = true;
   //this.originalTitle = tab.title;
+  this.showHours = false;
   this.show = function() {
     var s = this.present % 60,
         m = Math.min(99, Math.floor(this.present / 60) % 60);
         //m = Math.floor(this.present / 60) % 60,
-        //h = Math.min(99, Math.floor(this.present / 60/ 60) % 60);
+        h = Math.min(99, Math.floor(this.present / 60/ 60));
     s = ("0" + s).slice(-2);
     m = ("0" + m).slice(-2);
-    //h = ("0" + h).slice(-2);
+    h = ("0" + h).slice(-2);
     try {
       //if (!tab.url.match(/^https?:\/\//)) throw 'Invalid schema.';
       //chrome.tabs.executeScript(tabId, {code:'document.title = "' + [m, s].join(':') + ' | ' +  this.originalTitle + '";'});
-      var test = chrome.tabs.executeScript(tabId, {code:'document.title = "' + [m, s].join(':') +  '";'});
+      var clockVals = this.showHours ? [h, m, s] : [m, s]
+      var test = chrome.tabs.executeScript(tabId, {code:'document.title = "' + clockVals.join(':') +  '";'});
     }catch (e) {
     }
   };
   this.start = function() {
     this.hasStarted = true;
     this.isInitialState = false;
+    chrome.storage.sync.get('showHours', function(response) {
+      var showHours = (response.showHours == 1) ? true : false;
+      tabTimers[tab.id].showHours = showHours;
+      tabTimers[tab.id].show();
+    });
     timerId = setInterval(function() { // Fix me: global scope in setInterval
       tabTimers[tab.id].present += 1;
       tabTimers[tab.id].show();

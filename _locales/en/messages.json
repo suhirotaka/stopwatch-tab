@@ -13,5 +13,8 @@
   },
   "alertStop": {
     "message": "Stopped."
+  },
+  "showHours": {
+    "message": "Display hours"
   }
 }
