@@ -43,7 +43,11 @@ var TabTimer = function(tab) {
   };
   this.reset = function() {
     this.stop();
-    chrome.tabs.executeScript(tabId, {code:'document.title = "' + '00:00' +  '";'});
+    chrome.storage.sync.get('showHours', function(response) {
+      var showHours = (response.showHours == 1) ? true : false;
+      var clockStr = showHours ? '00:00:00' : '00:00';
+      chrome.tabs.executeScript(tabId, {code:'document.title = "' + clockStr +  '";'});
+    });
   };
 };
 
