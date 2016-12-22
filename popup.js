@@ -13,7 +13,7 @@ window.onload = function() {
       alertInvalid.style.display = '';
       setTimeout(function() {
         window.close();
-      }, 1500);
+      }, 2000);
       return false;
     }
     timerManager = new bg.TimerManager(tab);
